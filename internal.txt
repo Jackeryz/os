@@ -1,0 +1,5 @@
+cpu scheduling
+shell programming
+producer consumer
+readers writers
+memory allocation

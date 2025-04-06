@@ -13,8 +13,17 @@ int main() {
 
     printf("Enter the head: ");
     scanf("%d", &head);
-    q[n] = head;  
-    n++;          
+    int already_present = 0;
+    for (i = 0; i < n; i++)
+        if (q[i] == head) {
+            already_present = 1;
+            break;
+        }
+    if (!already_present) {
+        q[n] = head;
+        n++;
+    }
+              
 
     printf("Enter the maximum size of the disk: ");
     scanf("%d", &max);

@@ -13,9 +13,17 @@ int main() {
 
     printf("Enter the head: ");
     scanf("%d", &head);
-    q[n] = head;
-    n++; // total requests including head
-
+    int already_present = 0;
+    for (i = 0; i < n; i++)
+        if (q[i] == head) {
+            already_present = 1;
+            break;
+        }
+    if (!already_present) {
+        q[n] = head;
+        n++;
+    }
+    
     printf("Enter the maximum size of the disk: ");
     scanf("%d", &max);
 
@@ -23,12 +31,12 @@ int main() {
     scanf("%d", &dir);
 
     // Sort the array
-    for (i = 0; i < n - 1; i++)
-        for (j = 0; j < n - i - 1; j++)
+    for (i = 1; i < n; i++)
+        for (j = 0; j < n - i; j++)
             if (q[j] > q[j + 1]) {
-                int temp = q[j];
-                q[j] = q[j + 1];
-                q[j + 1] = temp;
+                q[j] ^= q[j+1];
+                q[j+1] ^= q[j];
+                q[j] ^= q[j+1];
             }
 
     // Find index of the head in sorted array

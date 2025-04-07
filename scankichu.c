@@ -1,5 +1,4 @@
 //readable kichu code
-//needs fix
 
 
 #include<stdio.h>

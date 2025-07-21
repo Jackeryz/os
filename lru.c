@@ -30,7 +30,7 @@ void algo(int p[], int n, int f)
         }
     }
 
-    printf("Total number of hits: %d and faults: %d",hits,faults);
+    printf("Total number of hits: %d and faults: %d\n",hits,faults);
 }
 
 

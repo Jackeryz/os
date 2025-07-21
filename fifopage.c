@@ -26,7 +26,7 @@ void Func(int p[], int n, int f){
     }
 
     printf("The no. of hits : %d\nThe no. of faults : %d\n",hits,faults);
-    printf("Hit ratio : %d:%d\nFault ratio : %d:%d",hits,hits+faults,faults,hits+faults);
+    printf("Hit ratio : %d:%d\nFault ratio : %d:%d\n",hits,hits+faults,faults,hits+faults);
         
 }
 

@@ -4,7 +4,7 @@ void Func(int p[], int n, int f){
 
     int i, j, hits = 0, faults = 0, front = 0, frames[f];
 
-    for(i=0; i<n; i++) frames[i]=-1;
+    for(i=0; i<f; i++) frames[i]=-1;
 
     for(i=0;i<n;i++){
 
